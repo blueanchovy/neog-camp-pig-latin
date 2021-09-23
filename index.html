@@ -4,35 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pig-Latin Translator</title>
     <style>
         :root{
             box-sizing: border-box;
-        }
-        #txt-input{
-            display: block;
+            --primary: pink;
         }
 
-        #btn-translate{
-            display: block;
+        body{
+            margin: 0px;
+        }
+        
+        nav{
+            background-color: var(--primary);
+            padding: 1rem;
+        }
+        main{
+            text-align: center;
+            margin: 0.5rem 1rem;
+        }
 
+        textarea{
+            display: block;
+            width: 100%;
+            min-height: 20vh;
+        }
+
+        button{
+            display: block;
+            width: 10rem;
+            height: 2rem;
+            margin: 1rem 0rem;
         }
 
         #txt-output{
             display: block;
             border: 1px solid black;
             min-height: 10vh;
-            width:100%
+            width:100%;
+            overflow: scroll;
+        }
+        
+        footer{
+            bottom: 0;
+            position: fixed;
+            background-color: var(--primary);
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <nav>Pig-Latin Translator</nav>
-    <input id="txt-input"></input>
-    <button id="btn-translate"></button>
+    <nav><h1 style="text-align:center;">Pig-Latin Translator</h1></nav>
+    <main>
+    <textarea id="txt-input" placeholder = "Enter the text you want to convert to Pig-Latin"></textarea>
+    <button id="btn-translate">Translate</button>
     <h2>Translated text goes here 👇</h2>
-    <div id="txt-output"></div>
+    <div id="txt-output" style="padding:1rem; font-size:large;"></div>
 
-    <script rel="/app.js" type="javascript"></script>
+    </main>
+
+    <footer>
+        <h2>about</h2>
+        Pig Latin is a constructed language game in which words in English are altered according to a simple set of rules. Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an ay. For example, pig yields igpay, banana yields ananabay, and trash yields ashtray or rashtay (dependent on location/preferences).
+    </footer>
+
+    <script rel="/app.js" type="text/javascript"></script>
 </body>
 </html>
