@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pig-Latin Translator</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400&display=swap');
         :root {
             box-sizing: border-box;
             --primary: pink;
@@ -14,37 +15,49 @@
 
         body {
             margin: 0px;
+        
+            font-family: 'Noto Sans Display', sans-serif;
         }
 
         nav {
             background-color: var(--primary);
             padding: 1rem;
+            width: auto;
+            height: 60px;
         }
 
         main {
             text-align: center;
-            margin: 0.5rem 1rem;
+            margin: 1rem auto;
+            max-width: 600px;
+            text-align: center;
+            display : block;
         }
 
         textarea {
             display: block;
-            width: 100%;
+            width : 16rem;
             min-height: 20vh;
+            margin : auto;
         }
 
         button {
             display: block;
             width: 10rem;
             height: 2rem;
-            margin: 1rem 0rem;
+            margin: 1rem auto;
+            border : 1px solid pink;
+            background-color: pink;
+            border-radius: 1rem;
         }
 
         #txt-output {
             display: block;
             border: 1px solid black;
             min-height: 10vh;
-            width: 100%;
+            width: 15rem;
             overflow: scroll;
+            margin: auto;
         }
 
         footer {
@@ -52,6 +65,9 @@
             position: fixed;
             background-color: var(--primary);
             text-align: center;
+            height: auto;
+            width: 100%;
+            
         }
     </style>
 </head>
@@ -70,11 +86,12 @@
     </main>
 
     <footer>
-        <h2>about</h2>
-        Pig Latin is a constructed language game in which words in English are altered according to a simple set of
+        <div style="margin:0.5rem 0rem; font-size:1rem; font-weight:bold;">about</div>
+        <div style="margin:0rem auto 1rem auto; font-size:0.7rem; padding: 0rem 2rem;">
+            Pig Latin is a constructed language game in which words in English are altered according to a simple set of
         rules. Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the
-        word and suffixes an ay. For example, pig yields igpay, banana yields ananabay, and trash yields ashtray or
-        rashtay (dependent on location/preferences).
+        word and suffixes an ay.
+        </div>
     </footer>
 
     <script src="app.js" type="text/javascript"></script>
